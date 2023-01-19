@@ -1,0 +1,26 @@
+// abrindo  o site 
+
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace chatbox
+{
+
+    public class abrir
+    {
+        public IWebDriver localizacao = new ChromeDriver();
+
+        public void AbrindoSite()
+        {
+            localizacao.Navigate().GoToUrl("https://web.whatsapp.com/");
+            localizacao.Manage().Window.Maximize();
+            Thread.Sleep(2000);
+        }
+        
+    }
+}
